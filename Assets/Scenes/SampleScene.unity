@@ -190,6 +190,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 132092526}
+  - component: {fileID: 132092527}
   m_Layer: 0
   m_Name: A1
   m_TagString: Untagged
@@ -212,6 +213,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1100597176}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &132092527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132092525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9662bcfdaa23cbd4eb9fac96649793df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectsMovement
+  _transforms: []
+  _timeManager: {fileID: 1100597177}
+  _ObjectFalling: {fileID: 2040159229}
 --- !u!1 &245933895
 GameObject:
   m_ObjectHideFlags: 0
@@ -9635,7 +9651,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
   _timeManager: {fileID: 1100597177}
-  _fallingLines: []
+  _fallingLines:
+  - {fileID: 132092527}
   _ObjectToSpawn: {fileID: 2040159229}
   _spawnTimer: 0
   _spawnDelayDuration: 3
@@ -10451,6 +10468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 598144bd6bd95954b9dc30ad53fbc162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputPlayerManagerCustom
+  _tapDuration: 1
 --- !u!95 &1709493973
 Animator:
   serializedVersion: 7

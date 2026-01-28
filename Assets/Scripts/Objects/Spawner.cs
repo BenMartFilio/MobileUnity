@@ -24,7 +24,7 @@ public class Spawner : MonoBehaviour
         _spawnTimer++;
         if(_spawnTimer >= _spawnDelayDuration)
         {
-            randomNumber = Random.Range(0, _fallingLines.Length);
+            randomNumber = Random.Range(0, _fallingLines.Length-1);
             _spawnTimer = 0;
             _fallingLines[randomNumber].Init((Instantiate(_ObjectToSpawn)));
         }
