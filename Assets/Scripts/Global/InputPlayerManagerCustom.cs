@@ -22,7 +22,7 @@ public class InputPlayerManagerCustom : MonoBehaviour
         {
             Touch firstTouch = Input.GetTouch(0);
 
-            if (firstTouch.phase == TouchPhase.Began)
+            if (firstTouch.phase == TouchPhase.Began)  //Récupérer l'information de began, puis celle d'end pour le swipe
             {
                 _isTouching = true;
             }
