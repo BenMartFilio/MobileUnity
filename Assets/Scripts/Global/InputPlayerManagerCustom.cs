@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using TouchPhase = UnityEngine.TouchPhase;
 
 public class InputPlayerManagerCustom : MonoBehaviour
 {
@@ -10,14 +12,33 @@ public class InputPlayerManagerCustom : MonoBehaviour
     private bool _isTouching = false;
     private float width = 0.0f;
     private float height = 0.0f;
+    private float _firstPosition;
+    private float _endPosition;
+
+
+   /* InputAction _tapAction;*/
 
     private void Start()
     {
         width = Screen.width;
         height = Screen.height;
+
+        /*_tapAction = InputSystem.actions.FindAction("Tap");*/
     }
+
+   /*public void OnTap()
+    {
+        Debug.Log("Tap");
+    }*/
+
     private void Update()
     {
+
+        /*Touch touch = _tapAction.ReadValue<Touch>();
+        if (touch.phase == UnityEngine.TouchPhase.Began)
+        {
+        }*/
+
         if (Input.touchCount > 0)
         {
             Touch firstTouch = Input.GetTouch(0);
@@ -25,14 +46,16 @@ public class InputPlayerManagerCustom : MonoBehaviour
             if (firstTouch.phase == TouchPhase.Began)  //Récupérer l'information de began, puis celle d'end pour le swipe
             {
                 _isTouching = true;
+                _firstPosition = firstTouch.position.x;
             }
             else if (firstTouch.phase == TouchPhase.Ended)
             {
                 _isTouching = false;
+                _endPosition = firstTouch.position.x;
                 if (_tapTimer <= _tapDuration)
                 {
                     Debug.LogWarning($"Tap OK !! Touch at {firstTouch.position}");
-                    if(firstTouch.position.x > width / 2)
+                    if (firstTouch.position.x > width / 2)
                     {
                         Debug.Log("Tap Right !!");
                     }
@@ -41,7 +64,19 @@ public class InputPlayerManagerCustom : MonoBehaviour
                         Debug.Log("Tap Left !!");
                     }
                 }
-                _tapTimer = 0.0f;
+                else if (_tapTimer >= _tapDuration) 
+                {
+                    if (_endPosition - _firstPosition >= 100)
+                    {
+                        Debug.Log("Swipe Direction 1");
+                    }
+                    else if (_endPosition - _firstPosition <= -100)
+                    {
+                        Debug.Log("Swipe Direction 2");
+                    }
+                        
+                }
+                    _tapTimer = 0.0f;
             }
 
 

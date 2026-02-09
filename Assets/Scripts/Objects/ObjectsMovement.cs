@@ -8,6 +8,10 @@ public class ObjectsMovement : MonoBehaviour
     [SerializeField] private TimeManager _timeManager;
     [SerializeField] private GameObject _ObjectFalling;
 
+    [SerializeField] private AudioEventDispatcher _AudioEventDispatcher;
+    [SerializeField] private AudioType _ObjectMovementAudioType;
+    [SerializeField] private AudioType _DestructionAudioType;
+
 
     public void Init(GameObject NewObject)
     {
@@ -35,10 +39,12 @@ public class ObjectsMovement : MonoBehaviour
         if (_index < _transforms.Length)
         {
             _ObjectFalling.transform.position = _transforms[_index].position;
+            _AudioEventDispatcher.PlayAudio(_ObjectMovementAudioType);
         }
         else
         {
             Destroy(_ObjectFalling);
+            _AudioEventDispatcher.PlayAudio(_DestructionAudioType);
             _index = -1;
         }
         
