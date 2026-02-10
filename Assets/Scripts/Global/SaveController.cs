@@ -1,0 +1,37 @@
+using UnityEngine;
+using System.IO;
+
+[System.Serializable]
+
+public class PlayerDatas
+{
+    public string Name;
+    public int Score;
+    public int Level;
+}
+
+public class SaveController
+{
+    public string GetPath()
+    {
+        return Application.persistentDataPath + "/save.json";
+    }
+
+    public void Save(PlayerDatas datas)
+    {
+        string json = JsonUtility.ToJson(datas, prettyPrint:true);
+        File.WriteAllText(GetPath(), contents: json);
+    }
+
+    public PlayerDatas Load()
+    {
+        string path = GetPath();
+        if (File.Exists(path))
+        {
+            string json = File.ReadAllText(path);
+            return JsonUtility.FromJson<PlayerDatas>(json);
+        }
+
+        return new PlayerDatas();
+    }
+}

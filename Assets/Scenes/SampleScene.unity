@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectsMovement
   _transforms: []
-  _timeManager: {fileID: 1100597177}
+  _timeManager: {fileID: 1823798165}
   _ObjectFalling: {fileID: 2040159229}
   _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
   _ObjectMovementAudioType: 0
@@ -586,9 +586,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectsMovement
   _transforms: []
-  _timeManager: {fileID: 0}
+  _timeManager: {fileID: 1823798165}
   _ObjectFalling: {fileID: 2040159229}
-  _AudioEventDispatcher: {fileID: 0}
+  _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
   _ObjectMovementAudioType: 0
   _DestructionAudioType: 0
 --- !u!1 &296397552
@@ -724,8 +724,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 383377037}
-  - component: {fileID: 383377038}
-  - component: {fileID: 383377039}
   m_Layer: 0
   m_Name: FallLine G
   m_TagString: Untagged
@@ -753,37 +751,6 @@ Transform:
   - {fileID: 453980507}
   m_Father: {fileID: 1077351176}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &383377038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383377036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a014bede87210e24e9a9843fb7ede1f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TimeManager
-  _timeStepDuration: 3
---- !u!114 &383377039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383377036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61f483377cce4cb40810fb78dc55330b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Spawner
-  _timeManager: {fileID: 383377038}
-  _fallingLines:
-  - {fileID: 295684132}
-  _ObjectToSpawn: {fileID: 2040159229}
-  _spawnTimer: 0
-  _spawnDelayDuration: 3
 --- !u!1 &440022264
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,9 +1152,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectsMovement
   _transforms: []
-  _timeManager: {fileID: 0}
+  _timeManager: {fileID: 1823798165}
   _ObjectFalling: {fileID: 2040159229}
-  _AudioEventDispatcher: {fileID: 0}
+  _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
   _ObjectMovementAudioType: 0
   _DestructionAudioType: 0
 --- !u!1 &561511850
@@ -2022,8 +1989,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 675869590}
-  - component: {fileID: 675869591}
-  - component: {fileID: 675869592}
   m_Layer: 0
   m_Name: FallLine E
   m_TagString: Untagged
@@ -2051,37 +2016,6 @@ Transform:
   - {fileID: 1203619926}
   m_Father: {fileID: 1077351176}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &675869591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 675869589}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a014bede87210e24e9a9843fb7ede1f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TimeManager
-  _timeStepDuration: 3
---- !u!114 &675869592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 675869589}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61f483377cce4cb40810fb78dc55330b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Spawner
-  _timeManager: {fileID: 675869591}
-  _fallingLines:
-  - {fileID: 1002189276}
-  _ObjectToSpawn: {fileID: 2040159229}
-  _spawnTimer: 0
-  _spawnDelayDuration: 3
 --- !u!1 &731835208
 GameObject:
   m_ObjectHideFlags: 0
@@ -2442,8 +2376,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 846813704}
-  - component: {fileID: 846813703}
-  - component: {fileID: 846813701}
   m_Layer: 0
   m_Name: FallLine C
   m_TagString: Untagged
@@ -2451,37 +2383,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &846813701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 846813700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61f483377cce4cb40810fb78dc55330b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Spawner
-  _timeManager: {fileID: 846813703}
-  _fallingLines:
-  - {fileID: 1919090824}
-  _ObjectToSpawn: {fileID: 2040159229}
-  _spawnTimer: 0
-  _spawnDelayDuration: 3
---- !u!114 &846813703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 846813700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a014bede87210e24e9a9843fb7ede1f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TimeManager
-  _timeStepDuration: 3
 --- !u!4 &846813704
 Transform:
   m_ObjectHideFlags: 0
@@ -10140,9 +10041,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectsMovement
   _transforms: []
-  _timeManager: {fileID: 0}
+  _timeManager: {fileID: 1823798165}
   _ObjectFalling: {fileID: 2040159229}
-  _AudioEventDispatcher: {fileID: 0}
+  _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
   _ObjectMovementAudioType: 0
   _DestructionAudioType: 0
 --- !u!1 &1005285388
@@ -10216,6 +10117,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1077351176}
+  - component: {fileID: 1077351177}
   m_Layer: 0
   m_Name: FallLine
   m_TagString: Untagged
@@ -10245,6 +10147,30 @@ Transform:
   - {fileID: 383377037}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1077351177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077351175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61f483377cce4cb40810fb78dc55330b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spawner
+  _timeManager: {fileID: 1823798165}
+  _fallingLines:
+  - {fileID: 132092527}
+  - {fileID: 1340147181}
+  - {fileID: 1919090824}
+  - {fileID: 1556949161}
+  - {fileID: 1002189276}
+  - {fileID: 552472333}
+  - {fileID: 295684132}
+  _ObjectToSpawn: {fileID: 2040159229}
+  _spawnTimer: 0
+  _spawnDelayDuration: 3
 --- !u!1 &1082593963
 GameObject:
   m_ObjectHideFlags: 0
@@ -10316,8 +10242,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1100597176}
-  - component: {fileID: 1100597177}
-  - component: {fileID: 1100597179}
   m_Layer: 0
   m_Name: FallLine A
   m_TagString: Untagged
@@ -10345,43 +10269,6 @@ Transform:
   - {fileID: 2040290678}
   m_Father: {fileID: 1077351176}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1100597177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100597175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a014bede87210e24e9a9843fb7ede1f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TimeManager
-  _timeStepDuration: 3
---- !u!114 &1100597179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100597175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61f483377cce4cb40810fb78dc55330b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Spawner
-  _timeManager: {fileID: 1100597177}
-  _fallingLines:
-  - {fileID: 132092527}
-  - {fileID: 1340147181}
-  - {fileID: 1919090824}
-  - {fileID: 1556949161}
-  - {fileID: 1002189276}
-  - {fileID: 552472333}
-  - {fileID: 295684132}
-  _ObjectToSpawn: {fileID: 2040159229}
-  _spawnTimer: 0
-  _spawnDelayDuration: 3
 --- !u!1 &1112995170
 GameObject:
   m_ObjectHideFlags: 0
@@ -10836,9 +10723,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectsMovement
   _transforms: []
-  _timeManager: {fileID: 1629637106}
+  _timeManager: {fileID: 1823798165}
   _ObjectFalling: {fileID: 2040159229}
-  _AudioEventDispatcher: {fileID: 0}
+  _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
   _ObjectMovementAudioType: 0
   _DestructionAudioType: 0
 --- !u!4 &1340147182
@@ -11103,9 +10990,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectsMovement
   _transforms: []
-  _timeManager: {fileID: 0}
+  _timeManager: {fileID: 1823798165}
   _ObjectFalling: {fileID: 2040159229}
-  _AudioEventDispatcher: {fileID: 0}
+  _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
   _ObjectMovementAudioType: 0
   _DestructionAudioType: 0
 --- !u!4 &1556949162
@@ -11287,8 +11174,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1629637107}
-  - component: {fileID: 1629637106}
-  - component: {fileID: 1629637104}
   m_Layer: 0
   m_Name: FallLine B
   m_TagString: Untagged
@@ -11296,37 +11181,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1629637104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629637103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61f483377cce4cb40810fb78dc55330b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Spawner
-  _timeManager: {fileID: 1629637106}
-  _fallingLines:
-  - {fileID: 1340147181}
-  _ObjectToSpawn: {fileID: 2040159229}
-  _spawnTimer: 0
-  _spawnDelayDuration: 3
---- !u!114 &1629637106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629637103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a014bede87210e24e9a9843fb7ede1f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TimeManager
-  _timeStepDuration: 3
 --- !u!4 &1629637107
 Transform:
   m_ObjectHideFlags: 0
@@ -11449,8 +11303,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1697125186}
-  - component: {fileID: 1697125185}
-  - component: {fileID: 1697125183}
   m_Layer: 0
   m_Name: FallLine D
   m_TagString: Untagged
@@ -11458,37 +11310,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1697125183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697125182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61f483377cce4cb40810fb78dc55330b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Spawner
-  _timeManager: {fileID: 1697125185}
-  _fallingLines:
-  - {fileID: 1556949161}
-  _ObjectToSpawn: {fileID: 2040159229}
-  _spawnTimer: 0
-  _spawnDelayDuration: 3
---- !u!114 &1697125185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697125182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a014bede87210e24e9a9843fb7ede1f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TimeManager
-  _timeStepDuration: 3
 --- !u!4 &1697125186
 Transform:
   m_ObjectHideFlags: 0
@@ -11625,8 +11446,6 @@ MonoBehaviour:
   - {fileID: 1087786962}
   - {fileID: 1232087734}
   - {fileID: 1804229558}
-  - {fileID: 0}
-  - {fileID: 0}
   m_inputManager: {fileID: 1709493972}
 --- !u!114 &1709493972
 MonoBehaviour:
@@ -11768,6 +11587,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1944461208}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1823798164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1823798166}
+  - component: {fileID: 1823798165}
+  m_Layer: 0
+  m_Name: TimeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1823798165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823798164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a014bede87210e24e9a9843fb7ede1f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimeManager
+  _timeStepDuration: 3
+--- !u!4 &1823798166
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823798164}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1856256089
 GameObject:
   m_ObjectHideFlags: 0
@@ -11860,9 +11724,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectsMovement
   _transforms: []
-  _timeManager: {fileID: 0}
+  _timeManager: {fileID: 1823798165}
   _ObjectFalling: {fileID: 2040159229}
-  _AudioEventDispatcher: {fileID: 0}
+  _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
   _ObjectMovementAudioType: 0
   _DestructionAudioType: 0
 --- !u!4 &1919090825
@@ -11967,8 +11831,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2025247977}
-  - component: {fileID: 2025247978}
-  - component: {fileID: 2025247979}
   m_Layer: 0
   m_Name: FallLine F
   m_TagString: Untagged
@@ -11996,37 +11858,6 @@ Transform:
   - {fileID: 82066138}
   m_Father: {fileID: 1077351176}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2025247978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2025247976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a014bede87210e24e9a9843fb7ede1f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TimeManager
-  _timeStepDuration: 3
---- !u!114 &2025247979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2025247976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61f483377cce4cb40810fb78dc55330b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Spawner
-  _timeManager: {fileID: 2025247978}
-  _fallingLines:
-  - {fileID: 552472333}
-  _ObjectToSpawn: {fileID: 2040159229}
-  _spawnTimer: 0
-  _spawnDelayDuration: 3
 --- !u!1 &2040159229 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7103464633127918985, guid: ef7a55b1c5cab064697805e808bbdcd0, type: 3}
@@ -12260,23 +12091,7 @@ PrefabInstance:
     - target: {fileID: 6749711721923372554, guid: ef7a55b1c5cab064697805e808bbdcd0, type: 3}
       propertyPath: _timeManager
       value: 
-      objectReference: {fileID: 1100597177}
-    - target: {fileID: 6749711721923372554, guid: ef7a55b1c5cab064697805e808bbdcd0, type: 3}
-      propertyPath: _ObjectFalling
-      value: 
-      objectReference: {fileID: 2040159229}
-    - target: {fileID: 6749711721923372554, guid: ef7a55b1c5cab064697805e808bbdcd0, type: 3}
-      propertyPath: _AudioEventDispatcher
-      value: 
-      objectReference: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
-    - target: {fileID: 6749711721923372554, guid: ef7a55b1c5cab064697805e808bbdcd0, type: 3}
-      propertyPath: _DestructionAudioType
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6749711721923372554, guid: ef7a55b1c5cab064697805e808bbdcd0, type: 3}
-      propertyPath: _ObjectMovementAudioType
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1823798165}
     - target: {fileID: 6749711721923372554, guid: ef7a55b1c5cab064697805e808bbdcd0, type: 3}
       propertyPath: '_transforms.Array.data[0]'
       value: 
@@ -12314,3 +12129,4 @@ SceneRoots:
   - {fileID: 2099511472}
   - {fileID: 7294142932979267994}
   - {fileID: 1119834013}
+  - {fileID: 1823798166}

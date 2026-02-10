@@ -109,4 +109,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   _timeManager: {fileID: 0}
-  _ObjectFalling: {fileID: 0}
+  _ObjectFalling: {fileID: 7103464633127918985}
+  _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
+  _ObjectMovementAudioType: 1
+  _DestructionAudioType: 3

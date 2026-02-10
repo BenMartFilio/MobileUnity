@@ -8,7 +8,7 @@ public class Spawner : MonoBehaviour
 
     [SerializeField] private int _spawnTimer = 0;
     [SerializeField] private int _spawnDelayDuration = 3;
-    private int randomNumber = 0;
+    private int randomNumber;
 
     private void OnEnable()
     {
@@ -16,7 +16,7 @@ public class Spawner : MonoBehaviour
     }
     private void OnDisable()
     {
-        _timeManager.OnTimePassed += TimeGestion;
+        _timeManager.OnTimePassed -= TimeGestion;
     }
 
     private void TimeGestion()
@@ -24,7 +24,7 @@ public class Spawner : MonoBehaviour
         _spawnTimer++;
         if(_spawnTimer >= _spawnDelayDuration)
         {
-            randomNumber = Random.Range(0, _fallingLines.Length-1);
+            randomNumber = Random.Range(0, _fallingLines.Length);
             _spawnTimer = 0;
             _fallingLines[randomNumber].Init((Instantiate(_ObjectToSpawn)));
         }
