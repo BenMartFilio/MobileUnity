@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 85070985258445130}
   - component: {fileID: 562014385756301310}
-  - component: {fileID: 6749711721923372554}
   m_Layer: 0
   m_Name: Object
   m_TagString: Untagged
@@ -92,24 +91,3 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &6749711721923372554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7103464633127918985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9662bcfdaa23cbd4eb9fac96649793df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObjectsMovement
-  _transforms:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _timeManager: {fileID: 0}
-  _ObjectFalling: {fileID: 7103464633127918985}
-  _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
-  _ObjectMovementAudioType: 1
-  _DestructionAudioType: 3
