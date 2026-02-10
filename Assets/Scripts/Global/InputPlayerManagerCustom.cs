@@ -7,7 +7,7 @@ public class InputPlayerManagerCustom : MonoBehaviour
 {
     public event Action OnMoveLeft;
     public event Action OnMoveRight;
-    [SerializeField] private float _tapDuration = 1.0f;
+    [SerializeField] private float _tapDuration = 0.5f;
     private float _tapTimer = 0.0f;
     private bool _isTouching = false;
     private float width = 0.0f;
@@ -77,6 +77,10 @@ public class InputPlayerManagerCustom : MonoBehaviour
                     else if (_endPosition - _firstPosition <= -100)
                     {
                         Debug.Log("Swipe Direction 2");
+                    }
+                    else
+                    {
+                        Debug.Log(_endPosition - _firstPosition);
                     }
                         
                 }
