@@ -5,9 +5,9 @@ using System.IO;
 
 public class PlayerDatas
 {
-    public string Name;
-    public int Score;
-    public int Level;
+    public string Name = "ErrorName404";
+    public int Score = 0;
+    public int Level = 1;
 }
 
 public class SaveController

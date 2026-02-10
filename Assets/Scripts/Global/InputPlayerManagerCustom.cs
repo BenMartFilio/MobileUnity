@@ -33,6 +33,10 @@ public class InputPlayerManagerCustom : MonoBehaviour
 
     private void Update()
     {
+        /*if (Touch.activeTouches.Count <= 0)
+        {
+            return;
+        }*/
 
         /*Touch touch = _tapAction.ReadValue<Touch>();
         if (touch.phase == UnityEngine.TouchPhase.Began)
