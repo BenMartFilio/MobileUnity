@@ -1147,7 +1147,7 @@ MonoBehaviour:
   - {fileID: 1533777225}
   - {fileID: 453980507}
   _timeManager: {fileID: 1823798165}
-  _ObjectFalling: {fileID: 2040159229}
+  _ObjectFalling: {fileID: 0}
   _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
   _ObjectMovementAudioType: 1
   _DestructionAudioType: 3
@@ -2765,7 +2765,7 @@ MonoBehaviour:
   - {fileID: 208921227}
   - {fileID: 1203619926}
   _timeManager: {fileID: 1823798165}
-  _ObjectFalling: {fileID: 2040159229}
+  _ObjectFalling: {fileID: 0}
   _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
   _ObjectMovementAudioType: 1
   _DestructionAudioType: 3
@@ -3161,7 +3161,7 @@ MonoBehaviour:
   - {fileID: 1882679297}
   - {fileID: 440022265}
   _timeManager: {fileID: 1823798165}
-  _ObjectFalling: {fileID: 2040159229}
+  _ObjectFalling: {fileID: 0}
   _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
   _ObjectMovementAudioType: 1
   _DestructionAudioType: 3
@@ -11190,13 +11190,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
   _timeManager: {fileID: 1823798165}
   _fallingLines:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1100597177}
+  - {fileID: 1629637108}
+  - {fileID: 846813705}
+  - {fileID: 1697125187}
+  - {fileID: 675869591}
+  - {fileID: 2025247978}
+  - {fileID: 383377038}
   _ObjectToSpawn: {fileID: 2040159229}
   _spawnTimer: 0
   _spawnDelayDuration: 3
@@ -11287,7 +11287,7 @@ MonoBehaviour:
   - {fileID: 14070482}
   - {fileID: 2040290678}
   _timeManager: {fileID: 1823798165}
-  _ObjectFalling: {fileID: 2040159229}
+  _ObjectFalling: {fileID: 0}
   _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
   _ObjectMovementAudioType: 1
   _DestructionAudioType: 3
@@ -12564,7 +12564,7 @@ MonoBehaviour:
   - {fileID: 621918656}
   - {fileID: 1654132326}
   _timeManager: {fileID: 1823798165}
-  _ObjectFalling: {fileID: 2040159229}
+  _ObjectFalling: {fileID: 0}
   _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
   _ObjectMovementAudioType: 1
   _DestructionAudioType: 3
@@ -12686,7 +12686,7 @@ MonoBehaviour:
   - {fileID: 289470618}
   - {fileID: 612179159}
   _timeManager: {fileID: 1823798165}
-  _ObjectFalling: {fileID: 2040159229}
+  _ObjectFalling: {fileID: 0}
   _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
   _ObjectMovementAudioType: 1
   _DestructionAudioType: 3
@@ -13048,7 +13048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a014bede87210e24e9a9843fb7ede1f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeManager
-  _timeStepDuration: 3
+  _timeStepDuration: 2
 --- !u!4 &1823798166
 Transform:
   m_ObjectHideFlags: 0
@@ -13443,7 +13443,7 @@ MonoBehaviour:
   - {fileID: 842880930}
   - {fileID: 82066138}
   _timeManager: {fileID: 1823798165}
-  _ObjectFalling: {fileID: 2040159229}
+  _ObjectFalling: {fileID: 0}
   _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
   _ObjectMovementAudioType: 1
   _DestructionAudioType: 3

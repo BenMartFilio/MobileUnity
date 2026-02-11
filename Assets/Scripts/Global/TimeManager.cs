@@ -4,7 +4,7 @@ using System;
 
 public class TimeManager : MonoBehaviour
 {
-    [SerializeField] private float _timeStepDuration = 3.0f;
+    [SerializeField] private float _timeStepDuration = 2.0f;
 
     public event Action OnTimePassed;
 
