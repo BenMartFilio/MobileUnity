@@ -15,8 +15,15 @@ public class ObjectsMovement : MonoBehaviour
 
     public void Init(GameObject NewObject)
     {
-        _ObjectFalling = NewObject;
-        MoveObject();
+        if (_ObjectFalling == null)
+        {
+            _ObjectFalling = NewObject;
+          //  MoveObject();
+        }
+        else 
+        {
+            Destroy(NewObject);  // Supprime si un deuxième tente d'être sur la même ligne
+        }
     }
 
     private void OnEnable()
