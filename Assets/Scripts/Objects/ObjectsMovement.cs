@@ -48,8 +48,14 @@ public class ObjectsMovement : MonoBehaviour
             _ObjectFalling.transform.position = _transforms[_index].position;
             _AudioEventDispatcher.PlayAudio(_ObjectMovementAudioType);
         }
+        else if (_index == _transforms.Length-2)
+        {
+            _ObjectFalling.transform.position = _transforms[_index].position;
+            //Mettre code où le joueur doit être à l'emplacement
+        }
         else
         {
+            // SI joueur pas là Détruire et enlever une vie
             Destroy(_ObjectFalling);
             _AudioEventDispatcher.PlayAudio(_DestructionAudioType);
             _index = -1;
