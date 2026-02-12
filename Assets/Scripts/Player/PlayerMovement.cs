@@ -17,29 +17,32 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         m_index = 2;
-        UpdatePosition();
+        UpdatePosition(1);
     }
 
     public void MoveToNextPosition()
     {
         m_index += m_moveSpeed;
         m_index = Mathf.Clamp(m_index,0,m_transforms.Length-1);
-        UpdatePosition();
+        UpdatePosition(1);
     }
     public void MoveToPreviousPosition() 
     {
         m_index -= m_moveSpeed;
         m_index = Mathf.Clamp(m_index, 0, m_transforms.Length - 1);
-        UpdatePosition();
+        UpdatePosition(-1);
     }
     public void MoveToDirection(int direction) //direction -1 ou 1
     {
         m_index += m_moveSpeed*direction;
         m_index = Mathf.Clamp(m_index, 0, m_transforms.Length - 1);
-        UpdatePosition();
+        UpdatePosition(direction);
     }
-    private void UpdatePosition()
+    private void UpdatePosition(float Orientation)
     {
         transform.position = m_transforms[m_index].position;
+        Quaternion actualRotation = transform.rotation;
+        actualRotation.y = Mathf.Clamp(180f * Orientation*-1, 0f, 180f);
+        transform.rotation = actualRotation;
     }
 }
