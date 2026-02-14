@@ -4,11 +4,15 @@ public class PlayerCollecting : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("TOUCHEEEE");
-    }
+        ObjectsWhichFall objectCollected = collision.gameObject.GetComponent<ObjectsWhichFall>();
+        if (objectCollected != null)
+        {
+            CollectingElement(objectCollected);
+        }
+    } 
 
-    public void CollectingElement()
+    public void CollectingElement(ObjectsWhichFall toDestroy)
     {
-
+        toDestroy.WhenGetted();
     }
 }
