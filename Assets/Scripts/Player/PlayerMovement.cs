@@ -5,6 +5,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Transform[] m_transforms;
     [SerializeField] private InputPlayerManagerCustom m_inputManager;
+    private Rigidbody2D rb;
     private int m_index = 2;
     private int m_moveSpeed = 1;
 
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         m_index = 2;
         UpdatePosition(1);
     }
