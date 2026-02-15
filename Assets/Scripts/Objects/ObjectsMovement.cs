@@ -20,6 +20,7 @@ public class ObjectsMovement : MonoBehaviour
         if (_ObjectFalling == null)
         {
             _ObjectFalling = NewObject;
+            _index = -1;
           //  MoveObject();
         }
         else 
