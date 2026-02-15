@@ -7,10 +7,12 @@ public class ObjectsMovement : MonoBehaviour
     private int _index = -1;
     [SerializeField] private TimeManager _timeManager;
     [SerializeField] private GameObject _ObjectFalling;
+    [SerializeField] private LifeSystem life;
 
     [SerializeField] private AudioEventDispatcher _AudioEventDispatcher;
     [SerializeField] private AudioType _ObjectMovementAudioType;
     [SerializeField] private AudioType _DestructionAudioType;
+    public event Action OnGround;
 
 
     public void Init(GameObject NewObject)
@@ -59,6 +61,7 @@ public class ObjectsMovement : MonoBehaviour
             Destroy(_ObjectFalling);
             _AudioEventDispatcher.PlayAudio(_DestructionAudioType);
             _index = -1;
+            life.MinusLife();
         }
         
     }
