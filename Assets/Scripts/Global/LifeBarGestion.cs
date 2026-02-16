@@ -13,8 +13,11 @@ public class LifeBarGestion : MonoBehaviour
         {
             for (int i = 0; i < CurrentHeartDisplayed - Life; i++)
             {
-                whichHeart[CurrentHeartDisplayed - (i+1)].LifeLosed();
-                whichHeart.RemoveAt(CurrentHeartDisplayed - (i+1));
+                if (whichHeart.Count > 0)
+                {
+                    whichHeart[CurrentHeartDisplayed - (i + 1)].LifeLosed();
+                    whichHeart.RemoveAt(CurrentHeartDisplayed - (i + 1));
+                }
             }
             CurrentHeartDisplayed = Life;
         }

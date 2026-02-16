@@ -4,8 +4,8 @@ using System;
 
 public class TimeManager : MonoBehaviour
 {
-    [SerializeField] private float _timeStepDuration = 2.0f;
-
+    [SerializeField] private float _timeStepDuration = 1.5f;
+    Coroutine coroutineTemps = null;
     public event Action OnTimePassed;
 
     IEnumerator SpendingTime()
@@ -24,11 +24,12 @@ public class TimeManager : MonoBehaviour
 
     public void StartTime()
     {
-        StartCoroutine(SpendingTime());
+        coroutineTemps = StartCoroutine(SpendingTime());
     }
 
     public void StopTime()
     {
-        StopCoroutine(SpendingTime());
+        Debug.Log("ARRET DU TEMPS");
+        StopCoroutine(coroutineTemps);
     }
 }

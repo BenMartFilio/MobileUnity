@@ -3223,6 +3223,7 @@ MonoBehaviour:
   playerCollect: {fileID: 1709493977}
   playerDatas: {fileID: 11400000, guid: f4468155d83768047979505908428315, type: 2}
   save: {fileID: 829058416}
+  time: {fileID: 1823798165}
 --- !u!4 &991829092
 Transform:
   m_ObjectHideFlags: 0
@@ -13323,7 +13324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a014bede87210e24e9a9843fb7ede1f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeManager
-  _timeStepDuration: 2
+  _timeStepDuration: 1.5
 --- !u!4 &1823798166
 Transform:
   m_ObjectHideFlags: 0

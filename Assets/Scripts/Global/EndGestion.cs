@@ -6,6 +6,7 @@ public class EndGestion : MonoBehaviour
     [SerializeField] private PlayerCollecting playerCollect;
     [SerializeField] private SO_PlayerDatas playerDatas;
     [SerializeField] private SaveGameSystem save;
+    [SerializeField] private TimeManager time;
 
     public void OnEndGame()
     {
@@ -15,6 +16,7 @@ public class EndGestion : MonoBehaviour
             playerDatas.Score1 = score;
         }
         save.SaveGame();
+        time.StopTime();
         Debug.Log($"Vous avez fait ce score : {score}");
     }
 }
