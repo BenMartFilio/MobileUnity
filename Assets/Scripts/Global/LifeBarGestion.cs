@@ -4,6 +4,7 @@ using UnityEngine;
 public class LifeBarGestion : MonoBehaviour
 {
     [SerializeField] private GameObject lifeHeart;
+    [SerializeField] private EndGestion endGestion;
     private List<OnLifeLose> whichHeart = new List<OnLifeLose>();
     private int CurrentHeartDisplayed;
     public void OnLifeUpdate(int Life)
@@ -29,9 +30,14 @@ public class LifeBarGestion : MonoBehaviour
             CurrentHeartDisplayed = Life;
         }
 
-        if (Life == 0)
+        if (Life <= 0)
         {
-            Debug.Log("MORT");
+            Death();
         }
+    }
+
+    public void Death()
+    {
+        endGestion.OnEndGame();
     }
 }

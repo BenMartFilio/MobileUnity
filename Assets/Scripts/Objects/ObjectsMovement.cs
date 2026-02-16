@@ -12,7 +12,6 @@ public class ObjectsMovement : MonoBehaviour
     [SerializeField] private AudioEventDispatcher _AudioEventDispatcher;
     [SerializeField] private AudioType _ObjectMovementAudioType;
     [SerializeField] private AudioType _DestructionAudioType;
-    public event Action OnGround;
 
 
     public void Init(GameObject NewObject)
@@ -46,23 +45,23 @@ public class ObjectsMovement : MonoBehaviour
             return;
         }
         _index++;
-        if (_index < _transforms.Length)
+        if (_index < _transforms.Length-1)
         {
             _ObjectFalling.transform.position = _transforms[_index].position;
             _AudioEventDispatcher.PlayAudio(_ObjectMovementAudioType);
         }
-        else if (_index == _transforms.Length-2)
+        else if (_index == _transforms.Length-1)
         {
             _ObjectFalling.transform.position = _transforms[_index].position;
-            //Mettre code où le joueur doit être à l'emplacement
+            _AudioEventDispatcher.PlayAudio(_DestructionAudioType);
+            _ObjectFalling.GetComponent<ObjectsWhichFall>().WhenDestroyed();
+            life.MinusLife();
         }
         else
         {
-            // SI joueur pas là Détruire et enlever une vie
             Destroy(_ObjectFalling);
-            _AudioEventDispatcher.PlayAudio(_DestructionAudioType);
             _index = -1;
-            life.MinusLife();
+            
         }
         
     }

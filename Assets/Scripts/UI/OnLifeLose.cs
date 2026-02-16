@@ -15,5 +15,6 @@ public class OnLifeLose : MonoBehaviour
     public void LifeLosed()
     {
         GetComponent<Image>().sprite = destroyedLife;
+        Destroy(gameObject);
     }
 }

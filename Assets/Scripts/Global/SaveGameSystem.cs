@@ -4,6 +4,10 @@ public class SaveGameSystem : MonoBehaviour
 {
     [SerializeField] private SO_PlayerDatas playerDatas;
 
+    private void Start()
+    {
+        LoadSaveGame();
+    }
     public void LoadSaveGame()
     {
         playerDatas.LoadDatas();

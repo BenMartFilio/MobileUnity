@@ -4,7 +4,9 @@ using UnityEngine;
 public class SO_PlayerDatas : ScriptableObject
 {
     public string Name;
-    public int Score;
+    public int Score1;
+    public int Score2;
+    public int Score3;
     public int Level;
 
 
@@ -18,18 +20,22 @@ public class SO_PlayerDatas : ScriptableObject
         PlayerDatas datas = saveSystem.Load();
         // donc je dois les affecter aux variables de mon scriptable object
         Name = datas.Name;
-        Score = datas.Score;
+        Score1 = datas.Score1;
+        Score2 = datas.Score2;
+        Score3 = datas.Score3;
         Level = datas.Level;
     }
 
     public void SaveDatas()
     {
         CheckSaveSystem();
-        // pour utiliser la fonction save de savesystem j'ai besoin e playerdatas
+        // pour utiliser la fonction save de savesystem j'ai besoin de playerdatas
         // donc je dois créer un playerdatas à partir de mon so
         PlayerDatas datas = new PlayerDatas();
         datas.Name = Name;
-        datas.Score = Score;
+        datas.Score1 = Score1;
+        datas.Score2 = Score2;
+        datas.Score3 = Score3;
         datas.Level = Level;
         // j'envois ça à la fonction save de savesystem
         saveSystem.Save(datas);

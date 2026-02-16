@@ -6,7 +6,9 @@ using System.IO;
 public class PlayerDatas
 {
     public string Name = "ErrorName404";
-    public int Score = 0;
+    public int Score1 = 0;
+    public int Score2 = 0;
+    public int Score3 = 0;
     public int Level = 1;
 }
 

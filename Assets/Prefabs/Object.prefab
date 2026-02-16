@@ -155,3 +155,4 @@ MonoBehaviour:
   - {fileID: 7533445990128857164, guid: f403797adfb15ae4cb2ee7fbb29a4234, type: 3}
   - {fileID: 2756655271022792262, guid: 88021dc1baefe604db96e87fd9668594, type: 3}
   - {fileID: 8236432160196758994, guid: 65895c6ae36b74643b347e267ef07d5b, type: 3}
+  spriteDestruction: {fileID: 4229364248364036090, guid: ec0d35fe4e29b8f44a41efacb3d3eccf, type: 3}
