@@ -39,7 +39,10 @@ public class PlayerCollecting : MonoBehaviour
             timeManager.UpdateSpeedTimer(Mathf.Clamp(timeManager._timeStepDuration * 0.9f, 0.3f, 1.5f)); // 15 étapes avant la vitesse finale
             scoreToReachForNewSpeed += 10;
             _AudioEventDispatcher.PlayAudio(_SpecialSoundWhenNewSpeed); //METTRE SON QUAND NEW SPEED
-            life.BonusLife();
+            if(score%50 == 0)
+            {
+                life.BonusLife(); 
+            }
         }
         else
         {
