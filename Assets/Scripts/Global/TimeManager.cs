@@ -31,4 +31,9 @@ public class TimeManager : MonoBehaviour
     {
         StopCoroutine(coroutineTemps);
     }
+
+    public void UpdateSpeedTimer(float newTime)
+    {
+        _timeStepDuration = newTime;
+    }
 }
