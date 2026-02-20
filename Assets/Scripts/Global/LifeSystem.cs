@@ -25,7 +25,7 @@ public class LifeSystem : MonoBehaviour
 
     public void LifeGestion(int HowManyPV)
     {
-        PV += HowManyPV;
+        PV = Mathf.Clamp(PV + HowManyPV,0,6);
         lifeBar.OnLifeUpdate(PV);
     }
     
