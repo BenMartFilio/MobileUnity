@@ -11017,7 +11017,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1029307484
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11658,7 +11658,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1176890137
 Transform:
   m_ObjectHideFlags: 0
@@ -13267,6 +13267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCollecting
   playerDatas: {fileID: 11400000, guid: f4468155d83768047979505908428315, type: 2}
   scoreInputField: {fileID: 1715791315}
+  timeManager: {fileID: 1823798165}
   score: 0
   bonus: 1
 --- !u!50 &1709493978

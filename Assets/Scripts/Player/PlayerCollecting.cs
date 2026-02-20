@@ -5,6 +5,11 @@ public class PlayerCollecting : MonoBehaviour
 {
     [SerializeField] private SO_PlayerDatas playerDatas;
     [SerializeField] private TMP_Text scoreInputField;
+    [SerializeField] private TimeManager timeManager;
+    private int scoreToReachForNewSpeed = 10;
+    [SerializeField] private AudioEventDispatcher _AudioEventDispatcher;
+    [SerializeField] private AudioType _SpecialSoundWhenNewSpeed;
+    [SerializeField] private AudioType _NormalGettingSound;
 
     public int score = 0;
     public float bonus = 1f;
@@ -28,5 +33,15 @@ public class PlayerCollecting : MonoBehaviour
         toDestroy.WhenGetted();
         score += (int) Mathf.Round(1*bonus);
         scoreInputField.text = score.ToString();
+        if (score > scoreToReachForNewSpeed)
+        {
+            timeManager._timeStepDuration = Mathf.Clamp(timeManager._timeStepDuration * 0.9f, 0.4f, 1.5f); // 13 étapes avant la vitesse finale
+            scoreToReachForNewSpeed += 10;
+            _AudioEventDispatcher.PlayAudio(_SpecialSoundWhenNewSpeed); //METTRE SON QUAND NEW SPEED
+        }
+        else
+        {
+            _AudioEventDispatcher.PlayAudio(_NormalGettingSound); // METTRE SON NORMAL GETTING
+        }
     }
 }
