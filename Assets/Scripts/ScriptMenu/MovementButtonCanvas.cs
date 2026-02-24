@@ -14,6 +14,8 @@ public class MovementButtonCanvas : MonoBehaviour
     [SerializeField] private TMP_Text textToChange;
     [SerializeField] private GetPositionAndCallCanvas[] boutonToGet;
     [SerializeField] private string[] listOfMiniGame;
+    [SerializeField] private int[] listOfSceneMiniGame;
+    [SerializeField] private ChangeLevel levelManager;
     private int IDOfButton = 0;
 
     void Start()
@@ -33,7 +35,7 @@ public class MovementButtonCanvas : MonoBehaviour
         
         if (_bAreWeStopped == true && newPosition.y == 0)
         {
-            JoinMiniGame();
+            JoinMiniGame(IDOfButton);
         }
         else
         {
@@ -75,8 +77,8 @@ public class MovementButtonCanvas : MonoBehaviour
         textToChange.text = listOfMiniGame[IDOfButton];
     }
 
-    public void JoinMiniGame()
+    public void JoinMiniGame(int ID)
     {
-        Debug.Log("JoinMiniGame");
+        levelManager.SwitchToLevel(listOfSceneMiniGame[ID]);
     }
 }

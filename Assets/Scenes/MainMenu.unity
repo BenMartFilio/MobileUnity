@@ -245,6 +245,8 @@ MonoBehaviour:
   - Game&Watch
   - MiniGame2
   - MiniGame3
+  listOfSceneMiniGame: 010000000000000000000000
+  levelManager: {fileID: 1949770299}
 --- !u!1 &142999412
 GameObject:
   m_ObjectHideFlags: 0
