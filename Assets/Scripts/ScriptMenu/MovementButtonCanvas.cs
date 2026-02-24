@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,14 +8,24 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class MovementButtonCanvas : MonoBehaviour
 {
-    [SerializeField] private Button[] miniGames;
     private Vector3 actualPosition;
     private Coroutine changingPosition = null;
     private bool _bAreWeStopped = true;
+    [SerializeField] private TMP_Text textToChange;
+    [SerializeField] private GetPositionAndCallCanvas[] boutonToGet;
+    [SerializeField] private string[] listOfMiniGame;
+    private int IDOfButton = 0;
 
     void Start()
     {
         actualPosition = transform.position;
+        WhenInPosition();
+    }
+
+    public void IDButton(int ID)
+    {
+        boutonToGet[ID].ChangerPos();
+        IDOfButton = ID;
     }
 
     public void ChangePosition(Vector3 newPosition)
@@ -60,8 +71,8 @@ public class MovementButtonCanvas : MonoBehaviour
 
     public void WhenInPosition()
     {
-        Debug.Log("WeStopped");
         _bAreWeStopped = true;
+        textToChange.text = listOfMiniGame[IDOfButton];
     }
 
     public void JoinMiniGame()
