@@ -10,7 +10,8 @@ public enum AudioType
     Death,
     Get,
     SpecialGet,
-    PlayGame
+    PlayGame,
+    Button
 
 }
 //Deux audio source (à faire) une qui fait la musique, et l'autre les sons (les sons sont joué un par un)
