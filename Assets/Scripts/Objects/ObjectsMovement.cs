@@ -13,6 +13,7 @@ public class ObjectsMovement : MonoBehaviour
     [SerializeField] private AudioType _ObjectMovementAudioType;
     [SerializeField] private AudioType _DestructionAudioType;
 
+    [SerializeField] private FlashScreen flash;
 
     public void Init(GameObject NewObject)
     {
@@ -56,6 +57,8 @@ public class ObjectsMovement : MonoBehaviour
             _AudioEventDispatcher.PlayAudio(_DestructionAudioType);
             _ObjectFalling.GetComponent<ObjectsWhichFall>().WhenDestroyed();
             life.MinusLife();
+
+            flash.TriggerFlash();
         }
         else
         {

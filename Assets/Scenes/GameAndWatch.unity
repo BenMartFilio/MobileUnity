@@ -1538,6 +1538,7 @@ MonoBehaviour:
   _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
   _ObjectMovementAudioType: 1
   _DestructionAudioType: 3
+  flash: {fileID: 1540488208}
 --- !u!1 &440022264
 GameObject:
   m_ObjectHideFlags: 0
@@ -3135,6 +3136,7 @@ MonoBehaviour:
   _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
   _ObjectMovementAudioType: 1
   _DestructionAudioType: 3
+  flash: {fileID: 1540488208}
 --- !u!1 &801090408
 GameObject:
   m_ObjectHideFlags: 0
@@ -3425,6 +3427,7 @@ RectTransform:
   - {fileID: 1746135046}
   - {fileID: 1715791314}
   - {fileID: 1237275686}
+  - {fileID: 1540488205}
   m_Father: {fileID: 1318787389}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3653,6 +3656,7 @@ MonoBehaviour:
   _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
   _ObjectMovementAudioType: 1
   _DestructionAudioType: 3
+  flash: {fileID: 1540488208}
 --- !u!1 &858973878
 GameObject:
   m_ObjectHideFlags: 0
@@ -12095,6 +12099,7 @@ MonoBehaviour:
   _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
   _ObjectMovementAudioType: 1
   _DestructionAudioType: 3
+  flash: {fileID: 1540488208}
 --- !u!1 &1119834010
 GameObject:
   m_ObjectHideFlags: 0
@@ -13819,6 +13824,97 @@ Transform:
   m_Children: []
   m_Father: {fileID: 383377037}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1540488204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1540488205}
+  - component: {fileID: 1540488207}
+  - component: {fileID: 1540488206}
+  - component: {fileID: 1540488208}
+  m_Layer: 5
+  m_Name: ErrorScreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1540488205
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540488204}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 829058411}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1540488206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540488204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1540488207
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540488204}
+  m_CullTransparentMesh: 1
+--- !u!114 &1540488208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540488204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05b4513b35571a54aa92bac61c12b153, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlashScreen
+  flashImage: {fileID: 1540488206}
+  flashDuration: 0.15
+  maxAlpha: 0.5
 --- !u!1 &1555374680
 GameObject:
   m_ObjectHideFlags: 0
@@ -14112,6 +14208,7 @@ MonoBehaviour:
   _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
   _ObjectMovementAudioType: 1
   _DestructionAudioType: 3
+  flash: {fileID: 1540488208}
 --- !u!1 &1654132325
 GameObject:
   m_ObjectHideFlags: 0
@@ -14235,6 +14332,7 @@ MonoBehaviour:
   _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
   _ObjectMovementAudioType: 1
   _DestructionAudioType: 3
+  flash: {fileID: 1540488208}
 --- !u!1 &1709493968
 GameObject:
   m_ObjectHideFlags: 0
@@ -15608,6 +15706,7 @@ MonoBehaviour:
   _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
   _ObjectMovementAudioType: 1
   _DestructionAudioType: 3
+  flash: {fileID: 1540488208}
 --- !u!1 &2040159229 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7103464633127918985, guid: ef7a55b1c5cab064697805e808bbdcd0, type: 3}
