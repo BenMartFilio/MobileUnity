@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     private int m_index = 2;
     private int m_moveSpeed = 1;
 
+    [SerializeField] private AudioEventDispatcher _AudioEventDispatcher;
+    [SerializeField] private AudioType _MoveAudioType;
+
     private void OnEnable()
     {
         m_inputManager.OnMoveLeft += MoveToPreviousPosition;
@@ -42,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void UpdatePosition(float Orientation)
     {
+        _AudioEventDispatcher.PlayAudio(_MoveAudioType);
         transform.position = m_transforms[m_index].position;
         Quaternion actualRotation = transform.rotation;
         actualRotation.y = Mathf.Clamp(180f * Orientation*-1, 0f, 180f);

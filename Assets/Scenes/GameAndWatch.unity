@@ -3963,6 +3963,8 @@ MonoBehaviour:
   currentMiniGame: 0
   returnToMenuButton: {fileID: 293154653}
   nameButton: {fileID: 1420017246}
+  _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
+  _DeathAudioType: 4
 --- !u!4 &991829092
 Transform:
   m_ObjectHideFlags: 0
@@ -14261,6 +14263,8 @@ MonoBehaviour:
   - {fileID: 1232087734}
   - {fileID: 1804229558}
   m_inputManager: {fileID: 1709493972}
+  _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
+  _MoveAudioType: 2
 --- !u!114 &1709493972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14402,8 +14406,8 @@ MonoBehaviour:
   timeManager: {fileID: 1823798165}
   life: {fileID: 1805586841}
   _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
-  _SpecialSoundWhenNewSpeed: 0
-  _NormalGettingSound: 0
+  _SpecialSoundWhenNewSpeed: 6
+  _NormalGettingSound: 5
   score: 0
   bonus: 1
 --- !u!50 &1709493978

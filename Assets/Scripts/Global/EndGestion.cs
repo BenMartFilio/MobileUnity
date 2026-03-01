@@ -19,8 +19,12 @@ public class EndGestion : MonoBehaviour
     [SerializeField] private GameObject nameButton;
     private CanvasGroup canvaGroup = null;
 
+    [SerializeField] private AudioEventDispatcher _AudioEventDispatcher;
+    [SerializeField] private AudioType _DeathAudioType;
+
     public void OnEndGame()
     {
+        _AudioEventDispatcher.PlayAudio(_DeathAudioType);
         int score = playerCollect.score;
         if (score > playerDatas.Score1)
         {
