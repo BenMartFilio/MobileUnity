@@ -26,12 +26,13 @@ public class ChangeDifficulty : MonoBehaviour
 
     public void SetSelectedButton(Button button)
     {
+        
         if (selectedButton != null)
         {
             selectedButton.GetComponent<Image>().color = normalColor;
         }
-
         selectedButton = button;
+
         selectedButton.GetComponent<Image>().color = highlightColor;
     }
 
