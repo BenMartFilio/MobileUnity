@@ -14,7 +14,14 @@ public class ChangeDifficulty : MonoBehaviour
 
     private void Start()
     {
-        SetSelectedButton(difficultyButtons[0]);
+        int indexToSelect = (int)playerDatas.selectedDifficulty;
+
+        if (indexToSelect < 0 || indexToSelect >= difficultyButtons.Count)
+        {
+            indexToSelect = 0;
+        }
+
+        SetSelectedButton(difficultyButtons[indexToSelect]);
     }
 
     public void SetSelectedButton(Button button)
