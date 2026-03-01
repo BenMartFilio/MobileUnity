@@ -7,6 +7,7 @@ public class InputPlayerManagerCustom : MonoBehaviour
 {
     public event Action OnMoveLeft;
     public event Action OnMoveRight;
+    public event Action OnTapScreen;
     [SerializeField] private float _tapDuration = 0.5f;
     private float _tapTimer = 0.0f;
     private bool _isTouching = false;
@@ -90,6 +91,7 @@ public class InputPlayerManagerCustom : MonoBehaviour
                 else
                 {   //It's a tap as the drag distance is less than 20% of the screen height
                     Debug.Log("Tap");
+                    OnTapScreen?.Invoke();
                 }
             }
         }
