@@ -11,6 +11,9 @@ public class StartMenu : MonoBehaviour
     private bool startActive = true;
     private float SizeOfText;
 
+    [SerializeField] private AudioEventDispatcher _AudioEventDispatcher;
+    [SerializeField] private AudioType _StartAudioType;
+
     private void OnEnable()
     {
         m_inputManager.OnTapScreen += StopArrow;
@@ -61,8 +64,14 @@ public class StartMenu : MonoBehaviour
 
     private void StopArrow()
     {
+        _AudioEventDispatcher.PlayAudio(_StartAudioType);
+        StartCoroutine(Wait());
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(1);
         startActive = false;
         level.SwitchToLevel(1);
     }
-
 }

@@ -15891,6 +15891,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5097686649360822022, guid: ef7a55b1c5cab064697805e808bbdcd0, type: 3}
+      propertyPath: spriteDestruction
+      value: 
+      objectReference: {fileID: -5353411725915851633, guid: f81e4dc0fce94084fa65b666e9a30aa6, type: 3}
     - target: {fileID: 7103464633127918985, guid: ef7a55b1c5cab064697805e808bbdcd0, type: 3}
       propertyPath: m_Name
       value: Object

@@ -250,6 +250,7 @@ MonoBehaviour:
   levelManager: {fileID: 1949770299}
   _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
   _PlayAudioType: 7
+  _WindAudioType: 10
 --- !u!1 &142999412
 GameObject:
   m_ObjectHideFlags: 0

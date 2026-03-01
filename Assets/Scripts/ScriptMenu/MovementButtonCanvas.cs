@@ -19,6 +19,7 @@ public class MovementButtonCanvas : MonoBehaviour
 
     [SerializeField] private AudioEventDispatcher _AudioEventDispatcher;
     [SerializeField] private AudioType _PlayAudioType;
+    [SerializeField] private AudioType _WindAudioType;
 
     void Start()
     {
@@ -60,7 +61,7 @@ public class MovementButtonCanvas : MonoBehaviour
         float t = 0f;
         float duration = 0.4f;
         _bAreWeStopped = false;
-
+        _AudioEventDispatcher.PlayAudio(_WindAudioType);
         while (t < 1f)
         {
             t += Time.deltaTime / duration;

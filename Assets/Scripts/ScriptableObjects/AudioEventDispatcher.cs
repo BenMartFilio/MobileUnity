@@ -11,7 +11,9 @@ public enum AudioType
     Get,
     SpecialGet,
     PlayGame,
-    Button
+    Button,
+    Start,
+    WindMoves
 
 }
 //Deux audio source (à faire) une qui fait la musique, et l'autre les sons (les sons sont joué un par un)

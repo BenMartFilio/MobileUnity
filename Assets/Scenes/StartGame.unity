@@ -1069,6 +1069,8 @@ MonoBehaviour:
   fadeSpeed: 0.5
   m_inputManager: {fileID: 1599931582}
   level: {fileID: 139605545}
+  _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
+  _StartAudioType: 9
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
