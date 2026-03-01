@@ -27,25 +27,27 @@ public class PlayerMovement : MonoBehaviour
 
     public void MoveToNextPosition()
     {
+        _AudioEventDispatcher.PlayAudio(_MoveAudioType);
         m_index += m_moveSpeed;
         m_index = Mathf.Clamp(m_index,0,m_transforms.Length-1);
         UpdatePosition(1);
     }
-    public void MoveToPreviousPosition() 
+    public void MoveToPreviousPosition()
     {
+        _AudioEventDispatcher.PlayAudio(_MoveAudioType);
         m_index -= m_moveSpeed;
         m_index = Mathf.Clamp(m_index, 0, m_transforms.Length - 1);
         UpdatePosition(-1);
     }
     public void MoveToDirection(int direction) //direction -1 ou 1
     {
+        _AudioEventDispatcher.PlayAudio(_MoveAudioType);
         m_index += m_moveSpeed*direction;
         m_index = Mathf.Clamp(m_index, 0, m_transforms.Length - 1);
         UpdatePosition(direction);
     }
     private void UpdatePosition(float Orientation)
     {
-        _AudioEventDispatcher.PlayAudio(_MoveAudioType);
         transform.position = m_transforms[m_index].position;
         Quaternion actualRotation = transform.rotation;
         actualRotation.y = Mathf.Clamp(180f * Orientation*-1, 0f, 180f);

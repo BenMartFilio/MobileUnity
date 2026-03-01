@@ -1,6 +1,5 @@
 using System.Collections;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using static UnityEngine.GraphicsBuffer;
@@ -17,6 +16,9 @@ public class MovementButtonCanvas : MonoBehaviour
     [SerializeField] private int[] listOfSceneMiniGame;
     [SerializeField] private ChangeLevel levelManager;
     private int IDOfButton = 0;
+
+    [SerializeField] private AudioEventDispatcher _AudioEventDispatcher;
+    [SerializeField] private AudioType _PlayAudioType;
 
     void Start()
     {
@@ -79,6 +81,13 @@ public class MovementButtonCanvas : MonoBehaviour
 
     public void JoinMiniGame(int ID)
     {
+        _AudioEventDispatcher.PlayAudio(_PlayAudioType);
+        StartCoroutine(Waiter(ID));
+    }
+
+    IEnumerator Waiter(int ID)
+    {
+        yield return new WaitForSeconds(1);
         levelManager.SwitchToLevel(listOfSceneMiniGame[ID]);
     }
 }
