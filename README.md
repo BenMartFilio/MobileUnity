@@ -7,3 +7,5 @@ Une fois le game and watch sélectionné, le joueur voit des flèches à droite 
 Lorsque le joueur a perdu, son score est affiché et il peut entrer un nom. Si son score est au dessus des 5 meilleurs scores enregitrés, son nom et son score figureront dans le tableau des scores.
 Il peut ensuite retourner sur l'écran de sélection des niveaux.
 Des sons et feedback visuels sont présents pour accompagner les actions du joueur.
+
+POST SCRIPTUM : Je n'avais pas de téléphone android pour tester le jeu. Il marche sur pc, mais il a probablement des problème sur mobile, et l'apk n'a pas pu être testé non plus (peut-être qu'il ne fonctionne pas).
