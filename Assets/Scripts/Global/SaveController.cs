@@ -1,5 +1,7 @@
-using UnityEngine;
+using System.Collections.Generic;
 using System.IO;
+using UnityEngine;
+using static SO_PlayerDatas;
 
 [System.Serializable]
 
@@ -10,6 +12,7 @@ public class PlayerDatas
     public int Score2 = 0;
     public int Score3 = 0;
     public int Level = 1;
+    public List<MiniGameHighScores> allHighScores = new List<MiniGameHighScores>();
 }
 
 public class SaveController

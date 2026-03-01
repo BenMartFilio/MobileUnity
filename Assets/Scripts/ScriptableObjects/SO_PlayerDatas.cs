@@ -1,4 +1,13 @@
+using System.Collections.Generic;
 using UnityEngine;
+
+[System.Serializable]
+
+public class MiniGameHighScores
+    {
+        public MiniGameType gameType;
+        public List<HighScoreEntry> highScores = new List<HighScoreEntry>();
+    }
 
 [CreateAssetMenu(fileName = "SO_PlayerDatas", menuName = "Scriptable Objects/SO_PlayerDatas")]
 public class SO_PlayerDatas : ScriptableObject
@@ -8,6 +17,11 @@ public class SO_PlayerDatas : ScriptableObject
     public int Score2;
     public int Score3;
     public int Level;
+    public Difficulty selectedDifficulty = Difficulty.Normal;
+
+
+    public List<MiniGameHighScores> allHighScores = new List<MiniGameHighScores>();
+
 
 
     private SaveController saveSystem;
@@ -24,6 +38,7 @@ public class SO_PlayerDatas : ScriptableObject
         Score2 = datas.Score2;
         Score3 = datas.Score3;
         Level = datas.Level;
+        allHighScores = datas.allHighScores;
     }
 
     public void SaveDatas()
@@ -37,6 +52,7 @@ public class SO_PlayerDatas : ScriptableObject
         datas.Score2 = Score2;
         datas.Score3 = Score3;
         datas.Level = Level;
+        datas.allHighScores = allHighScores;
         // j'envois ça à la fonction save de savesystem
         saveSystem.Save(datas);
     }
