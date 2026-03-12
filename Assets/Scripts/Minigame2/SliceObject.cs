@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -13,6 +14,12 @@ public class SliceObject : MonoBehaviour
 
     public float force = 5f;
     public float torque = 10f;
+
+    public int ID;
+    public int WhichIsGoodID;
+    public PlayerCollecting playerCollect;
+    public LifeSystem life;
+    public FlashScreen flash;
 
     private void Awake()
     {
@@ -34,29 +41,70 @@ public class SliceObject : MonoBehaviour
         unslicedObject.SetActive(false);
         slicedObject.SetActive(true);
 
-        for (int i = 0; i < slicedObject.transform.childCount; i++) 
+        if (ID == WhichIsGoodID)
         {
-            Rigidbody2D slicerRb = slicedObject.transform.GetChild(i).GetComponent<Rigidbody2D>();
-            slicerRb.linearVelocity = rb.linearVelocity;
-
-            Vector2 perpendicular = new Vector2(-sliceDirection.y, sliceDirection.x);
-            slicerRb.AddForce(Vector2.up * 2f, ForceMode2D.Impulse);
-            if (i == 0)
+            if (playerCollect != null)
             {
-                slicerRb.AddForce(-perpendicular * force, ForceMode2D.Impulse);
+                playerCollect.AddScoreAndLife();
             }
-            else
-            {
-                slicerRb.AddForce(perpendicular * force, ForceMode2D.Impulse);
-            }
-                
-
-            slicerRb.AddTorque(UnityEngine.Random.Range(-torque, torque), ForceMode2D.Impulse);
         }
+        else
+        {
+            //Mettre son vie perdue
+            life.MinusLife();
+            flash.TriggerFlash();
+            StartCoroutine(Camera.main.GetComponent<ScreenShake>().Shake(0.2f, 0.15f));
+        }
+
+            for (int i = 0; i < slicedObject.transform.childCount; i++)
+            {
+                Rigidbody2D slicerRb = slicedObject.transform.GetChild(i).GetComponent<Rigidbody2D>();
+                slicerRb.linearVelocity = rb.linearVelocity;
+
+                Vector2 perpendicular = new Vector2(-sliceDirection.y, sliceDirection.x);
+                slicerRb.AddForce(Vector2.up * 2f, ForceMode2D.Impulse);
+                if (i == 0)
+                {
+                    slicerRb.AddForce(-perpendicular * force, ForceMode2D.Impulse);
+                }
+                else
+                {
+                    slicerRb.AddForce(perpendicular * force, ForceMode2D.Impulse);
+                }
+
+
+                slicerRb.AddTorque(UnityEngine.Random.Range(-torque, torque), ForceMode2D.Impulse);
+            }
 
 
         col.enabled = false;
         rb.bodyType = RigidbodyType2D.Static;
+        StartCoroutine(ClearLag());
+    }
+
+    public void BeforeDestroy()
+    {
+        if (ID != WhichIsGoodID)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            //Mettre son vie perdue
+            life.MinusLife();
+            flash.TriggerFlash();
+            StartCoroutine(Camera.main.GetComponent<ScreenShake>().Shake(0.2f, 0.15f));
+            Destroy(gameObject);
+        }
+    }
+
+    private IEnumerator ClearLag()
+    {
+        yield return new WaitForSeconds(5);
+        if (gameObject != null)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void DestroyObject()

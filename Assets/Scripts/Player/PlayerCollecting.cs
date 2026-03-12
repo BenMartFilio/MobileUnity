@@ -32,13 +32,18 @@ public class PlayerCollecting : MonoBehaviour
     public void CollectingElement(ObjectsWhichFall toDestroy)
     {
         toDestroy.WhenGetted();
+        AddScoreAndLife();
+    }
+
+    public void AddScoreAndLife()
+    {
         score += (int) Mathf.Round(1*bonus);
         scoreInputField.text = score.ToString();
         if (score > scoreToReachForNewSpeed)
         {
-            timeManager.UpdateSpeedTimer(Mathf.Clamp(timeManager._timeStepDuration * 0.9f, 0.3f, 1.5f)); // 15 étapes avant la vitesse finale
+            timeManager.UpdateSpeedTimer(Mathf.Clamp(timeManager._timeStepDuration * 0.92f, 3f, 10f)); // 14 étapes avant la vitesse finale
             scoreToReachForNewSpeed += 10;
-            _AudioEventDispatcher.PlayAudio(_SpecialSoundWhenNewSpeed); //METTRE SON QUAND NEW SPEED
+            _AudioEventDispatcher.PlayAudio(_SpecialSoundWhenNewSpeed); // SON QUAND NEW SPEED
             if(score%50 == 0)
             {
                 life.BonusLife(); 
@@ -46,7 +51,7 @@ public class PlayerCollecting : MonoBehaviour
         }
         else
         {
-            _AudioEventDispatcher.PlayAudio(_NormalGettingSound); // METTRE SON NORMAL GETTING
+            _AudioEventDispatcher.PlayAudio(_NormalGettingSound); // SON NORMAL GETTING
         }
     }
 }

@@ -64,7 +64,6 @@ public class ObjectsMovement : MonoBehaviour
         {
             Destroy(_ObjectFalling);
             _index = -1;
-            
         }
         
     }

@@ -6,7 +6,7 @@ public class GroundDestroy : MonoBehaviour
     {
         if (collision.GetComponent<SliceObject>() != null)
         {
-            collision.GetComponent<SliceObject>().DestroyObject();
+            collision.GetComponent<SliceObject>().BeforeDestroy();
         }
     }
 }

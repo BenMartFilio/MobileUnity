@@ -174,6 +174,11 @@ MonoBehaviour:
   unslicedObject: {fileID: 3815223989316164632}
   force: 5
   torque: 10
+  ID: 0
+  WhichIsGoodID: 0
+  playerCollect: {fileID: 0}
+  life: {fileID: 0}
+  flash: {fileID: 0}
 --- !u!61 &6632415916186595997
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -235,7 +240,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -261,19 +266,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChangeSkin
   _skin:
   - {fileID: 7206421566398478556, guid: 4247eb2831933264ab7d61517e6c5550, type: 3}
+  - {fileID: 8236432160196758994, guid: 18ab6be255213be4f8d132bda4cba09b, type: 3}
+  - {fileID: 2840955850846026776, guid: 120e5972fb8f529498e7128e97a959f7, type: 3}
+  - {fileID: 3960760390114399648, guid: 2073797e005971d42b01c98d23f3f268, type: 3}
+  - {fileID: -7414543132534328891, guid: 74183e9579ee1344c905ddef07301d27, type: 3}
   _skinLeft:
   - {fileID: -1612478297179727848, guid: 13b0adebc751bcd4da9eb4a138b0c45b, type: 3}
+  - {fileID: 6072879857909803612, guid: ea27f89d929a54d46b697f515420a7d0, type: 3}
+  - {fileID: -6025660826172192446, guid: 1025da7a91a1b4a499f86e871a24a8e6, type: 3}
+  - {fileID: 6930148350583961785, guid: 565e8dce8e76c5b41b9f4925df1b6ad3, type: 3}
+  - {fileID: 7887518263392357783, guid: f32c84c54de19fb4dafe905f05cffd6e, type: 3}
   _skinRight:
   - {fileID: 8059779300170468392, guid: 861e6e91b6366fd499ed0d27a4e4891c, type: 3}
+  - {fileID: 3638636997313454777, guid: 233cb1f9a97914744852e56c96bcd0aa, type: 3}
+  - {fileID: -6971398433048313139, guid: fa8e8446fece23e42abb80bc7eb21da9, type: 3}
+  - {fileID: 6697864889530524004, guid: 2bed93a21cf116d4bad6f0a8c9378cbd, type: 3}
+  - {fileID: -3233241717950135104, guid: 5ae9c9c63bffe86479ae3ced001eea00, type: 3}
   _skinUp:
   - {fileID: 5171771986354375602, guid: e7188d2a57682c241a001af0883a016d, type: 3}
+  - {fileID: -6501299891281628618, guid: 87900303eee15cd4b9aad1d0b7a0c2ff, type: 3}
+  - {fileID: -442580390435665579, guid: b7b0c66165d6b5c4e95e2f7d9cdd279e, type: 3}
+  - {fileID: 3781113494832246505, guid: 5a72763b928aa044aa05a6339314f906, type: 3}
+  - {fileID: -7313126312934935065, guid: 8b37860dfbcd8244b82305c7e01c72ac, type: 3}
   _skinDown:
   - {fileID: -3388919754788345518, guid: 0134b0147e9b47444b8173851e342e47, type: 3}
+  - {fileID: 5851756442568742596, guid: 33df3d6d616f619459f290456af6a8f1, type: 3}
+  - {fileID: 5743883914145626837, guid: c3c56eecc6193c54993b76d8ee8ce5d6, type: 3}
+  - {fileID: 1509388276953430821, guid: 10415014a0bb90e42b47f2aee1c9322c, type: 3}
+  - {fileID: 539775748474700965, guid: e402295009922b546bff4d3fe552d4cc, type: 3}
   Complet: {fileID: 4042688344334931302}
   Left: {fileID: 5323374219683675636}
   Right: {fileID: 8903929782148907154}
   Up: {fileID: 429896292606361974}
   Down: {fileID: 8770093400781788030}
+  skinIndex: 0
 --- !u!1 &1906987760022612569
 GameObject:
   m_ObjectHideFlags: 0
