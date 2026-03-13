@@ -41,7 +41,6 @@ public class NewInputSystem2 : MonoBehaviour
 
         foreach (var hit in hits)
         {
-            Debug.Log("Fruit coupé : " + hit.collider.name);
             Vector2 swipeDir = (worldPos - lastPos).normalized;
 
             hit.collider.GetComponent<SliceCollision>().OnExitCollision(swipeDir);
