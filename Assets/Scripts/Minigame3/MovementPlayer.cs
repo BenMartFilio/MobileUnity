@@ -65,7 +65,7 @@ public class MovementPlayer : MonoBehaviour
 
     IEnumerator Jump()
     {
-        float jumpHeight = 2.5f;
+        float jumpHeight = 3f;
         float duration = 0.25f;
 
         Vector2 startPos = rb.position;
