@@ -244,9 +244,9 @@ MonoBehaviour:
   - {fileID: 395354911}
   listOfMiniGame:
   - Game&Watch
-  - MiniGame2
-  - MiniGame3
-  listOfSceneMiniGame: 020000000300000000000000
+  - Pizza Time
+  - Delivery Time
+  listOfSceneMiniGame: 020000000300000004000000
   levelManager: {fileID: 1949770299}
   _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
   _PlayAudioType: 7

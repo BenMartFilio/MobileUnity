@@ -677,14 +677,12 @@ GameObject:
   m_Component:
   - component: {fileID: 261114075}
   - component: {fileID: 261114074}
-  - component: {fileID: 261114073}
-  - component: {fileID: 261114072}
   - component: {fileID: 261114071}
-  - component: {fileID: 261114070}
   - component: {fileID: 261114069}
   - component: {fileID: 261114068}
   - component: {fileID: 261114067}
   - component: {fileID: 261114066}
+  - component: {fileID: 261114076}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -732,9 +730,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCollecting
   playerDatas: {fileID: 11400000, guid: f4468155d83768047979505908428315, type: 2}
-  scoreInputField: {fileID: 0}
-  timeManager: {fileID: 0}
-  life: {fileID: 0}
+  scoreInputField: {fileID: 1715791315}
+  timeManager: {fileID: 1823798165}
+  life: {fileID: 1805586841}
   _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
   _SpecialSoundWhenNewSpeed: 6
   _NormalGettingSound: 5
@@ -816,19 +814,6 @@ MonoBehaviour:
   m_DefaultActionMap: Mobile
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &261114070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 261114065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 598144bd6bd95954b9dc30ad53fbc162, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InputPlayerManagerCustom
-  _tapDuration: 1
 --- !u!95 &261114071
 Animator:
   serializedVersion: 7
@@ -851,42 +836,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &261114072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 261114065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 598144bd6bd95954b9dc30ad53fbc162, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InputPlayerManagerCustom
-  _tapDuration: 1
---- !u!114 &261114073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 261114065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd62e674000e1be49befaee61a96adf0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  m_transforms:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  m_inputManager: {fileID: 261114072}
-  _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
-  _MoveAudioType: 2
 --- !u!212 &261114074
 SpriteRenderer:
   serializedVersion: 2
@@ -961,6 +910,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &261114076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261114065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19505cd0d4aade94e86bc73739f8c373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovementPlayer
+  input: {fileID: 685338381}
 --- !u!1 &276936991
 GameObject:
   m_ObjectHideFlags: 0
@@ -2841,7 +2803,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 685338380}
-  - component: {fileID: 685338379}
+  - component: {fileID: 685338381}
   m_Layer: 0
   m_Name: InputManager
   m_TagString: Untagged
@@ -2849,21 +2811,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &685338379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 685338378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fa538c966bd11649b39b4ab5f475eaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewInputSystem2
-  Gameplay:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!4 &685338380
 Transform:
   m_ObjectHideFlags: 0
@@ -2879,6 +2826,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1979710235}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &685338381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685338378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d85fb3ee9614ac4e9bfafe789cb0a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LastInputSystem3
+  _tapDuration: 0.5
 --- !u!1 &691788682
 GameObject:
   m_ObjectHideFlags: 0
@@ -3590,7 +3550,7 @@ MonoBehaviour:
   scoresToChange: {fileID: 1393494593}
   endCanvas: {fileID: 801090408}
   nameInputField: {fileID: 606750143}
-  currentMiniGame: 1
+  currentMiniGame: 2
   returnToMenuButton: {fileID: 293154653}
   nameButton: {fileID: 1420017246}
   _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
