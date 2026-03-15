@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SO_PlayerDatas
   m_EditorClassIdentifier: Assembly-CSharp::SO_PlayerDatas
   Name: ErrorName404
-  Score1: 22
+  Score1: 10
   Score2: 0
   Score3: 0
   Level: 1
@@ -21,13 +21,31 @@ MonoBehaviour:
   allHighScores:
   - gameType: 0
     highScores:
-    - playerName: BMF
-      score: 2
     - playerName: AAA
-      score: 1
-    - playerName: AAA
-      score: 1
-    - playerName: DDD
       score: 0
-    - playerName: OUI
+    - playerName: AAA
+      score: 0
+    - playerName: AAA
+      score: 0
+    - playerName: AAA
+      score: 0
+    - playerName: g
+      score: 0
+  - gameType: 1
+    highScores:
+    - playerName: lllklkk
+      score: 10
+    - playerName: AAA
+      score: 2
+  - gameType: 2
+    highScores:
+    - playerName: AAA
+      score: 0
+    - playerName: AAA
+      score: 0
+    - playerName: AAA
+      score: 0
+    - playerName: AAA
+      score: 0
+    - playerName: g
       score: 0

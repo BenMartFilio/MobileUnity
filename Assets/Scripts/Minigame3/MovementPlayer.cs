@@ -15,6 +15,8 @@ public class MovementPlayer : MonoBehaviour
     [SerializeField] private AddScore maison;
     [SerializeField] private TimeManager time;
 
+    private Animator m_Animator;
+
     private void OnEnable()
     {
         input.OnTapScreen += WhenTaped;
@@ -27,8 +29,10 @@ public class MovementPlayer : MonoBehaviour
 
     void Start()
     {
+        m_Animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         StartCoroutine(Delay());
+        
     }
 
     IEnumerator Delay()
@@ -55,6 +59,7 @@ public class MovementPlayer : MonoBehaviour
 
     IEnumerator Deplacement()
     {
+        m_Animator.SetBool("IsWalking?", true);
         float t = 0f;
         float duration = 0.4f;
 
@@ -127,6 +132,7 @@ public class MovementPlayer : MonoBehaviour
         }
         StartCoroutine(Camera.main.GetComponent<ScreenShake>().Shake(0.2f, 0.15f));
         isPlaying = false;
+        m_Animator.SetBool("IsWalking?", false);
         death.Death();
         maison.StopMoving();
     }

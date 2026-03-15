@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class SpawnObstacle : MonoBehaviour
@@ -9,7 +10,7 @@ public class SpawnObstacle : MonoBehaviour
     public float maxDelay = 3f;
     public bool isSpawning = false;
     [SerializeField] private TimeManager _timeManager;
-
+    
     private Coroutine spawning;
 
     private List<GameObject> poolObject = new List<GameObject>();
