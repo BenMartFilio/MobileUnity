@@ -5,6 +5,24 @@ public class GoundMouvement : MonoBehaviour
     public float speed = 5f;
     public float width;
     public bool started = false;
+    [SerializeField] private int maxSpeed = 30;
+
+    [SerializeField] private TimeManager _timeManager;
+
+    private void OnEnable()
+    {
+        _timeManager.OnTimePassed += Acceleration;
+    }
+
+    private void OnDisable()
+    {
+        _timeManager.OnTimePassed -= Acceleration;
+    }
+
+    public void Acceleration()
+    {
+        speed = Mathf.Clamp(speed+1,1,maxSpeed);
+    }
 
     void Update()
     {
