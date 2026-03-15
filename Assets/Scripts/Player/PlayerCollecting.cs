@@ -46,7 +46,10 @@ public class PlayerCollecting : MonoBehaviour
             _AudioEventDispatcher.PlayAudio(_SpecialSoundWhenNewSpeed); // SON QUAND NEW SPEED
             if(score%50 == 0)
             {
-                life.BonusLife(); 
+                if (life != null)
+                {
+                    life.BonusLife();
+                }
             }
         }
         else

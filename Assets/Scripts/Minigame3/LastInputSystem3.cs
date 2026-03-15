@@ -8,7 +8,20 @@ public class LastInputSystem3 : MonoBehaviour
 
     private Vector3 fp;   //First touch position
     private Vector3 lp;   //Last touch position
-    private float dragDistance;  //minimum distance for a swipe to be registered
+
+    private float width = 0.0f;
+    private float height = 0.0f;
+    private float dragDistance;  
+
+    private void Start()
+    {
+        width = Screen.width;
+        height = Screen.height;
+
+        dragDistance = Screen.height * 15 / 100;
+
+        /*_tapAction = InputSystem.actions.FindAction("Tap");*/
+    }
     private void Update()
     {
         if (Input.touchCount == 1) // user is touching the screen with a single touch
@@ -32,7 +45,7 @@ public class LastInputSystem3 : MonoBehaviour
                 {
                 }
                 else
-                {   
+                {
                     OnTapScreen?.Invoke();
                 }
             }

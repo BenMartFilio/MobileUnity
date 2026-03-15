@@ -8,6 +8,12 @@ public class MovementPlayer : MonoBehaviour
     private bool firstTime = true;
     private Coroutine deplace;
     private Coroutine jump;
+    [SerializeField] private SpawnObstacle spawner;
+    [SerializeField] private GoundMouvement[] groundMove;
+    private bool isPlaying = true;
+    [SerializeField] private DeathPlayer death;
+    [SerializeField] private AddScore maison;
+    [SerializeField] private TimeManager time;
 
     private void OnEnable()
     {
@@ -22,16 +28,22 @@ public class MovementPlayer : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        StartCoroutine(Delay());
+    }
+
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(0.2f);
+        time.StopTime();
     }
 
     private void WhenTaped()
     {
-        if (firstTime)
+        if (!isPlaying)
         {
-            firstTime = false;
-            deplace = StartCoroutine(Deplacement());
+            return;
         }
-        else if (deplace == null)
+        if (deplace == null)
         {
             if (jump  == null)
             {
@@ -44,7 +56,7 @@ public class MovementPlayer : MonoBehaviour
     IEnumerator Deplacement()
     {
         float t = 0f;
-        float duration = 1f;
+        float duration = 0.4f;
 
         Vector2 startPos = rb.position;
         Vector2 endPos = startPos + Vector2.right * 2f;
@@ -58,6 +70,11 @@ public class MovementPlayer : MonoBehaviour
             yield return null;
         }
 
+        spawner.StartSpawning();
+        foreach (GoundMouvement a in groundMove)
+        {
+            a.StartMove();
+        }
         StopCoroutine(deplace);
         deplace = null;
         //Déclencher mouvement terrain
@@ -65,30 +82,52 @@ public class MovementPlayer : MonoBehaviour
 
     IEnumerator Jump()
     {
-        float jumpHeight = 3f;
-        float duration = 0.25f;
+        float jumpHeight = 7f;
+        float duration = 0.8f;
 
         Vector2 startPos = rb.position;
-        Vector2 topPos = startPos + Vector2.up * jumpHeight;
 
-        float t = 0;
-
-        while (t < 1f)
-        {
-            t += Time.deltaTime / duration;
-            rb.MovePosition(Vector2.Lerp(startPos, topPos, t));
-            yield return null;
-        }
-
-        t = 0;
+        float t = 0f;
 
         while (t < 1f)
         {
             t += Time.deltaTime / duration;
-            rb.MovePosition(Vector2.Lerp(topPos, startPos, t));
+
+            float smoothT = Mathf.SmoothStep(0f, 1f, t);
+
+            float height = 4 * jumpHeight * smoothT * (1 - smoothT);
+
+            Vector2 pos = new Vector2(startPos.x, startPos.y + height);
+
+            rb.MovePosition(pos);
+
             yield return null;
         }
+        if (firstTime)
+        {
+            deplace = StartCoroutine(Deplacement());
+            firstTime = false;
+            time.StartTime();
+        }
 
+        rb.MovePosition(startPos);
         jump = null;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.GetComponent<ScrollingElement>() == null)
+        {
+            return;
+        }
+        spawner.StopSpawning();
+        foreach (GoundMouvement a in groundMove)
+        {
+            a.StopMove();
+        }
+        StartCoroutine(Camera.main.GetComponent<ScreenShake>().Shake(0.2f, 0.15f));
+        isPlaying = false;
+        death.Death();
+        maison.StopMoving();
     }
 }
