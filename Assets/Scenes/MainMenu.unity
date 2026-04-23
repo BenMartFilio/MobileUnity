@@ -705,7 +705,6 @@ GameObject:
   - component: {fileID: 195712347}
   - component: {fileID: 195712346}
   - component: {fileID: 195712345}
-  - component: {fileID: 195712344}
   - component: {fileID: 195712348}
   m_Layer: 5
   m_Name: ScoreButton
@@ -734,19 +733,6 @@ RectTransform:
   m_AnchoredPosition: {x: 30, y: 30}
   m_SizeDelta: {x: 400, y: 190}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &195712344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 195712342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c193969d41df4f4b9405dfeaae6b648, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DifficultyButton
-  difficultyManager: {fileID: 1672079030}
 --- !u!114 &195712345
 MonoBehaviour:
   m_ObjectHideFlags: 0
