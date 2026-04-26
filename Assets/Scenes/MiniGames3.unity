@@ -977,6 +977,10 @@ MonoBehaviour:
   death: {fileID: 194518514}
   maison: {fileID: 405015818}
   time: {fileID: 1823798165}
+  _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
+  _WalkAudioType: 15
+  _DeathAudioType: 4
+  _JumpAudioType: 13
 --- !u!1 &276936991
 GameObject:
   m_ObjectHideFlags: 0

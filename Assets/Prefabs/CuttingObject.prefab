@@ -179,6 +179,9 @@ MonoBehaviour:
   playerCollect: {fileID: 0}
   life: {fileID: 0}
   flash: {fileID: 0}
+  _AudioEventDispatcher: {fileID: 11400000, guid: 9d6a1565710ddc54a9c3be93f168910f, type: 2}
+  _LoseAudioType: 3
+  _SlicedAudioType: 10
 --- !u!61 &6632415916186595997
 BoxCollider2D:
   m_ObjectHideFlags: 0

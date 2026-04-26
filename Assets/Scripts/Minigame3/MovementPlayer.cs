@@ -14,6 +14,10 @@ public class MovementPlayer : MonoBehaviour
     [SerializeField] private DeathPlayer death;
     [SerializeField] private AddScore maison;
     [SerializeField] private TimeManager time;
+    [SerializeField] private AudioEventDispatcher _AudioEventDispatcher;
+    [SerializeField] private AudioType _WalkAudioType;
+    [SerializeField] private AudioType _DeathAudioType;
+    [SerializeField] private AudioType _JumpAudioType;
 
     private Animator m_Animator;
 
@@ -89,6 +93,7 @@ public class MovementPlayer : MonoBehaviour
     {
         float jumpHeight = 7f;
         float duration = 0.8f;
+        _AudioEventDispatcher.PlayAudio(_JumpAudioType);
 
         Vector2 startPos = rb.position;
 
@@ -132,6 +137,7 @@ public class MovementPlayer : MonoBehaviour
         }
         StartCoroutine(Camera.main.GetComponent<ScreenShake>().Shake(0.2f, 0.15f));
         isPlaying = false;
+        _AudioEventDispatcher.PlayAudio(_DeathAudioType);
         m_Animator.SetBool("IsWalking?", false);
         death.Death();
         maison.StopMoving();

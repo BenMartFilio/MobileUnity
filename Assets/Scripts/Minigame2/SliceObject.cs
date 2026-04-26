@@ -19,7 +19,10 @@ public class SliceObject : MonoBehaviour
     public int WhichIsGoodID;
     public PlayerCollecting playerCollect;
     public LifeSystem life;
-    public FlashScreen flash;
+    public FlashScreen flash; 
+    [SerializeField] private AudioEventDispatcher _AudioEventDispatcher;
+    [SerializeField] private AudioType _LoseAudioType;
+    [SerializeField] private AudioType _SlicedAudioType;
 
     private void Awake()
     {
@@ -40,6 +43,7 @@ public class SliceObject : MonoBehaviour
     {
         unslicedObject.SetActive(false);
         slicedObject.SetActive(true);
+        _AudioEventDispatcher.PlayAudio(_SlicedAudioType);
 
         if (ID == WhichIsGoodID)
         {
@@ -51,6 +55,7 @@ public class SliceObject : MonoBehaviour
         else
         {
             //Mettre son vie perdue
+            _AudioEventDispatcher.PlayAudio(_LoseAudioType);
             life.MinusLife();
             flash.TriggerFlash();
             StartCoroutine(Camera.main.GetComponent<ScreenShake>().Shake(0.2f, 0.15f));
@@ -91,6 +96,7 @@ public class SliceObject : MonoBehaviour
         else
         {
             //Mettre son vie perdue
+            _AudioEventDispatcher.PlayAudio(_LoseAudioType);
             life.MinusLife();
             flash.TriggerFlash();
             StartCoroutine(Camera.main.GetComponent<ScreenShake>().Shake(0.2f, 0.15f));

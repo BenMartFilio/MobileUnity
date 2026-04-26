@@ -18,8 +18,9 @@ public class AudioEventManager : MonoBehaviour
 
     private void PlayAudioFX(AudioClip clip)
     {
-        audioSource.Stop();
+   //     audioSource.Stop();
         audioSource.clip = clip;
-        audioSource.Play();
+   //     audioSource.Play();
+        audioSource.PlayOneShot(clip);
     }
 }

@@ -31,3 +31,9 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 9486f59c8fc98124490abf81ff88b60c, type: 3}
   - audioType: 10
     audioClip: {fileID: 8300000, guid: 51e43298c8ddefa49a8b6ea339a32060, type: 3}
+  - audioType: 13
+    audioClip: {fileID: 8300000, guid: 632dfd642728fe84f8a6a8dd240df569, type: 3}
+  - audioType: 14
+    audioClip: {fileID: 8300000, guid: 51e43298c8ddefa49a8b6ea339a32060, type: 3}
+  - audioType: 15
+    audioClip: {fileID: 8300000, guid: 51e43298c8ddefa49a8b6ea339a32060, type: 3}
