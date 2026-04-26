@@ -13,7 +13,10 @@ public enum AudioType
     PlayGame,
     Button,
     Start,
-    WindMoves
+    WindMoves,
+    FailFruit,
+    Jump,
+    PizzaDeliver
 
 }
 //Deux audio source (à faire) une qui fait la musique, et l'autre les sons (les sons sont joué un par un)
