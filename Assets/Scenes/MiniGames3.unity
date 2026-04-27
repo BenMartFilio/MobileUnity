@@ -4406,7 +4406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a411b69286b1feb4d89a215d90826cea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EndGestion
-  playerCollect: {fileID: 1663100649}
+  playerCollect: {fileID: 261114067}
   playerDatas: {fileID: 11400000, guid: f4468155d83768047979505908428315, type: 2}
   save: {fileID: 829058416}
   time: {fileID: 1823798165}
