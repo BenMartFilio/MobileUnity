@@ -5,6 +5,10 @@ public class AddScore : MonoBehaviour
     [SerializeField] private PlayerCollecting playerCollect;
     [SerializeField] private TimeManager _timeManager;
     [SerializeField] private GameObject SpawnPoint;
+
+    [Tooltip("Reference to MovementPlayer to trigger the Lanceur sprite and FlyPizza.")]
+    [SerializeField] private MovementPlayer _movementPlayer;
+
     float speed = 7;
     private bool isMoving = false;
 
@@ -17,7 +21,6 @@ public class AddScore : MonoBehaviour
     {
         _timeManager.OnTimePassed -= SpawnAndMove;
     }
-
 
     void Update()
     {
@@ -46,8 +49,8 @@ public class AddScore : MonoBehaviour
             return;
         }
         playerCollect.AddScoreAndLife();
+        _movementPlayer?.OnHouseScored(transform);
     }
-
 
     public void SpawnAndMove()
     {
